@@ -8,6 +8,12 @@ Format
 Length
 : 1.5-2h (during Western Europe daytime)
 
+Consistent with the topic of the workshop, this repository is mirrored in several places, with the primary repository currently being the one hosted on Codeberg:
+
+- [Codeberg: jezcope/git-wo-github](https://codeberg.org/jezcope/git-wo-github) **Primary**
+- [sr.ht: ~petrichor/git-wo-github](https://sr.ht/~petrichor/git-wo-github/)
+- [GitHub: jezcope/git-wo-github](https://github.com/jezcope/git-wo-github)
+
 ## Audience
 
 This workshop is for people who use GitHub to collaborate on code, writing or similar projects, and who would like to learn more about what alternatives are available. It's especially aimed at researchers and research software engineers.
