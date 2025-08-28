@@ -1,6 +1,8 @@
 # Workshop: Collaborative git without GitHub
 
-Athough git was created as a decentralised way to collaborate, the practical needs of day-to-day work have pushed most of us to use it through a centralised platform (generically called a "forge"), of which the most common is Microsoft's GitHub.
+Although git was created as a decentralised way to collaborate, the practical needs of day-to-day work have pushed most of us to use it through a centralised platform (generically called a "forge"), of which the most common is Microsoft's GitHub. That centralisation exposes us to a number of risks, primarily reliance on one forge as a single point of failure, so it's useful to have an understanding of what other options are out there.
+
+This workshop will give you a chance to think through and discuss how you use GitHub, and identify options for replacing or augmenting it with other tools to make your development process more resilient.
 
 Format
 : Interactive online workshop
