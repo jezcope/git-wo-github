@@ -1,0 +1,40 @@
+#+title: Collaborative it/vcs without github
+#+subtitle: Planning
+#+author: Jez Cope <j.cope@erambler.co.uk>
+
+* Options
+
+** Git repository sharing
+
+*** Other forges
+
+- [[https://codeberg.org/][Codeberg.org]]
+- [[https://tildegit.org/][tildegit]]
+
+*** Static website
+
+*** Self-hosted
+
+- [[https://forgejo.org/][Forgejo]]
+  - See also gitea
+- GitLab
+- [[https://gitolite.com/gitolite/][gitolite]]
+- [[https://git-scm.com/docs/gitweb][gitweb]]
+- [[https://github.com/charmbracelet/soft-serve][soft-serve]]
+
+*** Shared file storage
+
+- via SSH, or locally-mounted network filestore
+- Careful of permissions!
+
+*** Tildeverse
+
+- e.g. [[https://wiki.tilde.institute/w/user-repos][User git Repositories :: tilde.institute]]
+
+*** Local network
+
+- via SSH
+- using ~git daemon~
+- ngrok, tailscale, wireguard
+  
+** 
