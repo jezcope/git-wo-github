@@ -1,0 +1,85 @@
+#+title: Git without GitHub
+#+subtitle: A smol workshop
+#+author: Jez Cope
+#+date: 3 September 2025
+#+options: num:nil timestamp:nil toc:nil
+#+options: reveal_history:t
+#+reveal_root: reveal.js-4.6.0
+#+reveal_theme: dracula
+#+reveal_trans: fade
+#+export_file_name: index.html
+#+exclude_tags: noexport draft
+
+
+* Overview
+:PROPERTIES:
+:CUSTOM_ID: overview
+:END:
+1. Why bother with alternatives
+2. What's possible
+3. 
+
+** Ground rules
+:PROPERTIES:
+:CUSTOM_ID: ground-rules
+:END:
+
+We are /not/ here to bash anyone's choice of tool, workflow, etc
+
+We are all learning: /please be generous & curious/
+
+** Recurse Center's 4 rules
+:PROPERTIES:
+:CUSTOM_ID: recurse-centers-4-rules
+:NOSLIDE:  t
+:END:
+
+1. No well-actually's
+2. No feigned surprise
+3. No backseat driving
+4. No subtle -isms
+
+[[https://www.recurse.com/social-rules]]
+
+** Icebreaker
+
+* Why consider alternatives?
+** Monocultures are fragile
+** Git is distributed by design
+** It's good to have backup options
+
+* A brief (and probably wrong) history of version control :draft:
+** In the beginning there was Unix
+
+Shared access to files
+
+#+attr_reveal: :frag fade
+What if *two people*\\
+edit the *same file*\\
+at the *same time*...
+
+** RCS: Revision Control System
+
+Works through file locking
+
+Per-file history
+
+No concept of a "repository"
+
+** CVS: Concurrent Version System
+
+A front end to RCS
+
+
+
+** Subversion
+
+
+* Over to you
+
+*5 minutes* in breakout rooms
+
+- What do you use GitHub for?
+  - If you /don't/ use it: what do you use instead?
+- What features do you use?
+- What would you miss most/least if it wasn't there?
