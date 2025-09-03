@@ -2,3 +2,6 @@ _build
 book
 mirrors
 /slides/index.html
+
+# Local Netlify folder
+.netlify

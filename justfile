@@ -7,7 +7,10 @@ copy-static:
     cp -R slides/reveal.js-4.6.0 _build/html/slides/
 
 deploy-site: build-site
-    echo "Deployment not implemented yet!"
+    netlify deploy
 
 clean:
     rm -rf _build/html
+
+serve-slides:
+    python -m http.server -d slides

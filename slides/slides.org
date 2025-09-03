@@ -2,36 +2,44 @@
 #+subtitle: A smol workshop
 #+author: Jez Cope
 #+date: 3 September 2025
-#+options: num:nil timestamp:nil toc:nil
+#+options: num:t timestamp:nil toc:nil
 #+options: reveal_history:t
 #+reveal_root: reveal.js-4.6.0
 #+reveal_theme: dracula
 #+reveal_trans: fade
+#+reveal_extra_css: custom.css
 #+export_file_name: index.html
 #+exclude_tags: noexport draft
-
+#+columns: %40ITEM %Duration
 
 * Overview
 :PROPERTIES:
 :CUSTOM_ID: overview
+:Duration: 5 minutes
 :END:
 1. Why bother with alternatives
 2. What's possible
 3. 
 
-** Ground rules
-:PROPERTIES:
-:CUSTOM_ID: ground-rules
-:END:
+** Please note...
+This workshop is in *beta*!
 
-We are /not/ here to bash anyone's choice of tool, workflow, etc
+Any and all feedback welcome (but be kind 😅)
+
+# ** Ground rules
+# :PROPERTIES:
+# :CUSTOM_ID: ground-rules
+# :END:
+#+reveal:split
+
+We are /not/ here to bash anyone's choice of tool, workflow, knowledge, experience, etc
 
 We are all learning: /please be generous & curious/
+
 
 ** Recurse Center's 4 rules
 :PROPERTIES:
 :CUSTOM_ID: recurse-centers-4-rules
-:NOSLIDE:  t
 :END:
 
 1. No well-actually's
@@ -42,40 +50,98 @@ We are all learning: /please be generous & curious/
 [[https://www.recurse.com/social-rules]]
 
 ** Icebreaker
+:PROPERTIES:
+:Duration: 10 minutes
+:END:
 
-* Why consider alternatives?
+Your name
+
+Your favourite comfort food
+
+One thing you hope to learn today
+
+* Why consider alternatives to GitHub?
 ** Monocultures are fragile
 ** Git is distributed by design
 ** It's good to have backup options
 
-* A brief (and probably wrong) history of version control :draft:
+* A brief (and probably wrong) history of (mostly) open source version control
+
+#+reveal: split
+#+attr_html: :style width: 70%;
+[[file:PCR-896.jpg]]
+#+reveal: split
+#+attr_html: :style width: 70%;
+[[file:PCR-896-routing.jpg]]
+#+reveal: split
+#+attr_html: :style width: 70%;
+[[file:First_Computer_Bug_1945.jpg]]
+#+reveal: split
+#+attr_html: :style width: 70%;
+[[file:SAR-L-1D-03.jpg]]
+#+reveal: split
+Images: [[https://www.ibiblio.org/apollo/links2.html#PcrsPcns&gsc.tab=0][Virtual AGC Document Library]]/[[https://commons.wikimedia.org/wiki/File:First_Computer_Bug,_1945.jpg][Wikimedia]]
+
 ** In the beginning there was Unix
 
 Shared access to files
 
-#+attr_reveal: :frag fade
-What if *two people*\\
+But what if *two people*\\
 edit the *same file*\\
 at the *same time*...
 
-** RCS: Revision Control System
+** 1982: Revision Control System (RCS)
 
-Works through file locking
+Works through file locking:\\
+check out -> edit -> check in
 
-Per-file history
+Per-file history (no security)
 
 No concept of a "repository"
 
-** CVS: Concurrent Version System
+** 1986: Concurrent Version System (CVS)
 
-A front end to RCS
+A front-end to RCS
 
+Server/client model
 
+Repositories!
 
-** Subversion
+** 2000: Subversion
 
+Many improvements on CVS
 
-* Over to you
+Atomic commits
+
+Branch and directory tracking
+
+HTTP/WebDAV support
+
+** Mid-2000s: The Cambrian Explosion!
+
+Distributed version control as we know it
+
+Darcs released in 2003!\\
+Bazaar, Git, Mercurial in 2005\\
+Fossil in 2006
+
+Every working copy is a first-class repository
+
+Push from/pull to multiple repositories
+
+Work offline & sync changes later
+
+** Forges
+
+#+attr_reveal: :frag (fade)
+- Sourceforge (CVS, later Subversion, Bazaar, Mercurial, Git)
+- GitHub, Gitorious, GitLab, Bitbucket and many more (during the Cambrian Explosion)
+- Network effects kick in, GitHub "wins"
+- Microsoft purchases GitHub, invests heavily in differentiating features (i.e. vendor lock-in)
+- /...time passes.../
+- GitHub marketed as "the world’s most widely adopted AI-powered developer platform" 💀
+
+* Your experiences
 
 *5 minutes* in breakout rooms
 
@@ -83,3 +149,149 @@ A front end to RCS
   - If you /don't/ use it: what do you use instead?
 - What features do you use?
 - What would you miss most/least if it wasn't there?
+
+#+reveal: split data-background-iframe="https://wall.sli.do/event/e7o7sMfEg4X3wsL58HQD2j"
+
+* Strategies
+
+** Stick with it... for now
+
+** Replace wholesale
+
+** Replace piecemeal
+
+** Augment
+
+** Back to basics
+
+** All of the above?
+
+- Stick with it... for now
+- Replace wholesale
+- Replace piecemeal
+- Augment
+- Back to basics
+
+* Intermission
+
+* Options
+
+** Before you start: make backups
+
+- ~git clone --mirror~
+- [[https://docs.github.com/en/repositories/archiving-a-github-repository/backing-up-a-repository][GitHub API or CLI]] 
+- [[https://pypi.org/project/github-backup/][ ~python-github-backup~ script]]
+- Zenodo & figshare integrations
+
+** Alternative forges
+
+- GitLab: https://gitlab.com
+- Bitbucket: https://bitbucket.org
+- Codeberg: https://codeberg.org
+  - [[https://codeberg.org/forgejo-contrib/delightful-forgejo#public-instances][Many other instances]] available
+- Sourcehut: https://sr.ht
+- Azure DevOps
+
+** Serverless or self-hosted
+
+- A shared folder! :: Access via network share or SSH
+- Patches by email :: `git send-email`
+- Static web site :: Use `git update-server-info` & any web server
+- Gitolite :: Minimal ssh-based setup
+- Radicle :: Peer to peer
+- Forgejo, Gitea, Gogs, Kallithea :: Full self-hostable web forges
+- Soft Serve :: TUI-style minimalist server
+
+** Individual pieces
+
+N.B. these lists are *not* authoritative or complete
+
+*** Issue tracking
+
+- Minimal
+  - Mailing lists
+  - In-repository management e.g. trackdown
+- Open source
+  - Bugzilla
+  - Trac
+  - Request Tracker
+  - Redmine
+- Commercial
+  - Jira
+  - Trello
+
+*** Code review
+
+- Minimal
+  - Mailing lists
+- Open source
+  - Gerrit
+
+*** Continuous Integration/Deployment
+
+- Minimal
+  - Git `pre-commit` or `post-commit` hooks
+- Open source
+  - Woodpecker CI
+  - Circle CI
+  - Jenkins
+- Commercial
+  - Travis CI
+  - Netlify
+- Honourable mention
+  - Radicle CI
+
+*** Static web hosting
+
+- Minimal
+  - Your internet service provider
+  - Your employer/institution
+- Open source
+  - Apache httpd
+  - nginx
+  - lighttpd
+- Commercial
+  - /Sooooo many.../
+
+*** Project management
+
+- Minimal
+  - Plain text files
+  - Taskjuggler, todo.txt, org-mode
+  - Whiteboard & sticky notes
+- Open source
+  - Launchpad
+  - Redmine
+- Commercial
+  - /Sooooo many.../
+
+*** Wiki
+
+- Minimal
+  - Text files in version control
+  - Tiddlywiki
+- Open source
+  - Mediawiki
+  - DokuWiki
+  - MoinMoin
+- Commercial
+  - /Sooooo many.../
+
+* Discussion
+
+10 minutes in breakout rooms
+
+
+
+#+reveal: split data-background-iframe="https://app.sli.do/event/e7o7sMfEg4X3wsL58HQD2j/embed/polls/4be1e96e-a54a-415a-8d5d-bba9bdcc4b0a"
+
+* A final thought
+
+- *Easygit:* Alternative frontend to git
+- *Mercurial:* Python-based, very stable and flexible, can clone/pull/push git repositories
+- *Breezy:* Python-based, successor to Bazaar, can work directly on git working copies
+- *Fossil:* Integrates many forge-features directly
+- *Darcs:* Haskell-based, stores patches instead of snapshots
+- *Pijul:* Rust-based, under development, also patch-focused
+
+#+reveal: split data-background-iframe="https://wall.sli.do/event/e7o7sMfEg4X3wsL58HQD2j/embed/polls/41b59695-f671-4173-86e1-9af125016cc5"
