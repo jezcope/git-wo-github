@@ -16,9 +16,16 @@ Length
 
 Consistent with the topic of the workshop, this repository is mirrored in several places, with the primary repository currently being the one hosted on Codeberg:
 
-- [Codeberg: jezcope/git-wo-github](https://codeberg.org/jezcope/git-wo-github) **Primary**
-- [sr.ht: ~petrichor/git-wo-github](https://sr.ht/~petrichor/git-wo-github/)
-- [GitHub: jezcope/git-wo-github](https://github.com/jezcope/git-wo-github)
+- Git
+  - [Codeberg: jezcope/git-wo-github](https://codeberg.org/jezcope/git-wo-github) **Primary**
+  - [sr.ht: ~petrichor/git-wo-github](https://sr.ht/~petrichor/git-wo-github/)
+  - [GitHub: jezcope/git-wo-github](https://github.com/jezcope/git-wo-github)
+- Mercurial
+  - [sr.ht: ~petrichor/git-wo-github](https://hg.sr.ht/~petrichor/git-wo-github)
+- Darcs
+  - [darcs hub](https://hub.darcs.net/petrichor/git-wo-github)
+- Pijul
+  - [The Nest: petrichor/git-wo-github](https://nest.pijul.com/petrichor/git-wo-github)
 
 ## Audience
 
