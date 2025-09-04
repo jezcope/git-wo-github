@@ -16,3 +16,18 @@ clean:
 
 serve-slides:
     python -m http.server -d slides
+
+update-mirrors: update-hg update-pijul update-darcs
+
+[working-directory: 'mirrors/hg']
+update-hg:
+    hg pull {{ justfile_directory() }}
+
+[working-directory: 'mirrors/pijul']
+update-pijul:
+    pijul git {{ justfile_directory() }}
+
+[working-directory: 'mirrors']
+update-darcs:
+    rm -rf darcs
+    (cd ..; git fast-export --all --progress 500) | darcs convert import darcs   
