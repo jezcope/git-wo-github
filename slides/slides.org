@@ -19,7 +19,7 @@
 :END:
 1. Why bother with alternatives
 2. What's possible
-3. 
+3. Strategies
 
 ** Please note...
 This workshop is in *beta*!
@@ -194,13 +194,13 @@ Work offline & sync changes later
 
 ** Serverless or self-hosted
 
-- A shared folder! :: Access via network share or SSH
-- Patches by email :: `git send-email`
-- Static web site :: Use `git update-server-info` & any web server
-- Gitolite :: Minimal ssh-based setup
-- Radicle :: Peer to peer
-- Forgejo, Gitea, Gogs, Kallithea :: Full self-hostable web forges
-- Soft Serve :: TUI-style minimalist server
+- A shared folder!: Access via network share or SSH
+- Patches by email: ~git send-email~
+- Static web site: Use ~git update-server-info~ & any web server
+- Gitolite: Minimal ssh-based setup
+- Radicle: Peer to peer
+- Forgejo, Gitea, Gogs, Kallithea: Full self-hostable web forges
+- Soft Serve: TUI-style minimalist server
 
 ** Individual pieces
 
@@ -226,11 +226,13 @@ N.B. these lists are *not* authoritative or complete
   - Mailing lists
 - Open source
   - Gerrit
+- Commercial
+  - /Sooooo many.../
 
 *** Continuous Integration/Deployment
 
 - Minimal
-  - Git `pre-commit` or `post-commit` hooks
+  - Git ~pre-commit~ or ~post-commit~ hooks
 - Open source
   - Woodpecker CI
   - Circle CI

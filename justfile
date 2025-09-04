@@ -4,6 +4,8 @@ build-site: clean && copy-static
 copy-static:
     mkdir -p _build/html/slides
     cp slides/index.html _build/html/slides/
+    cp slides/*.jpg _build/html/slides/
+    cp slides/*.css _build/html/slides/
     cp -R slides/reveal.js-4.6.0 _build/html/slides/
 
 deploy-site: build-site

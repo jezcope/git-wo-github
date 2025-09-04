@@ -4,6 +4,10 @@ Although git was created as a decentralised way to collaborate, the practical ne
 
 This workshop will give you a chance to think through and discuss how you use GitHub, and identify options for replacing or augmenting it with other tools to make your development process more resilient.
 
+:::{attention}
+You can [find the Git without GitHub workshop slides here](/slides/) if that's what you're looking for.
+:::
+
 Format
 : Interactive online workshop
 
